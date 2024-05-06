@@ -42,7 +42,7 @@ public class Main {
 				else if (eccesso<60)	//tra 40 e 59:	sanzione è da 543 a 2170
 					sanzione=543+(eccesso-40)*(2170-543)/19;
 				else 	{				//oltre i 60: sanzione da 845 a 3382 					
-					sanzione=845+(eccesso-40)*(3382-845)/59;
+					sanzione=845+(eccesso-40)*(3382-845)/30;
 					if (sanzione >3382)
 						sanzione=3382;						
 				}
