@@ -1,5 +1,6 @@
 package org.generation.italy;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -7,6 +8,7 @@ public class Main {
 		int limiteVelocità,velocitàRilevata, tolleranza, eccesso, sanzione;
 		String risposta;
 		Scanner sc=new Scanner(System.in);
+		Random r=new Random();		//dichiaro un generatore di numeri casuali
 		
 		System.out.println("Calcolo sanzioni autovelox\n\n");	// mostro il titolo e vado a capo 2 volte (\n)
 		
@@ -16,9 +18,13 @@ public class Main {
 		
 			
 		do {
+			/*
 			System.out.print("Inserire la velocità rilevata: ");
 			velocitàRilevata=sc.nextInt();
 			sc.nextLine();
+			*/
+			velocitàRilevata=r.nextInt(250)+1;	//i numeri estratti andranno da 1 a 250
+			System.out.println("Velocità rilevata: "+velocitàRilevata);
 			
 			if (velocitàRilevata<0) 
 				System.out.println("Velocità non valida, reinserire.");
